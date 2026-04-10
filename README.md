@@ -21,14 +21,14 @@ Ubuntu Version: 24.04.3 LTS
 **Step 1: Clone the repository** \
 git clone https://github.com/MalishaIslam/EMA6096_Reproducible_Workflow 
 
-**Step 2: Enter project directory**
+**Step 2: Enter project directory** \
 cd EMA6096_Reproducible_Workflow 
 
-**Step 3: Build container image**
+**Step 3: Build container image** \
 podman compose build           [first time we need this to build the container image]
 
 > [!Note]
-> For Step 3, if require, install "sudo apt install podman-compose" \
+> For Step 3, if require, install "sudo apt install podman-compose" 
 
 **Step 4: Run workflow** \
 just \
@@ -36,7 +36,6 @@ This command rebuilds the database from scratch using UniProt API.
 
 
 **Database Creation Process**
-The script:
 
 - downloads UniProt records 
 - processes approximately 115 pages
@@ -58,7 +57,7 @@ Estimated Runtime: 4-5 minutes
 **Viewing Database**
 
 > [!TIP]
-> To view the database, install 'sudo apt install sqlitebrowser'
+> To view the database, install 'sudo apt install sqlitebrowser' \
 > sqlitebrowser output/uniprot_sequences_with_X.db
 
 <img width="975" height="573" alt="image" src="https://github.com/user-attachments/assets/3648f5d5-aaa2-455f-b409-2cd68d4ba48e" />
