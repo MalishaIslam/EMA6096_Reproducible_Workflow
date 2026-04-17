@@ -8,4 +8,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY . /app
 
-RUN pip install --no-cache-dir pandas requests
+# RUN pip install --no-cache-dir pandas requests
+
+RUN pip install --no-cache-dir \
+    pandas \
+    requests \
+    numpy \
+    scipy
