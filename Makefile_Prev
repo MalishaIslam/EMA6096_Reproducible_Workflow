@@ -1,0 +1,25 @@
+PYTHON     := python3
+SCRIPT     := scripts/build_uniprot_db.py
+OUTPUT_DIR := output
+
+DB_ALL     := $(OUTPUT_DIR)/uniprot_all_sequences.db
+DB_X       := $(OUTPUT_DIR)/uniprot_sequences_with_X.db
+
+# ── Targets ──────────────────────────────────────────
+
+.PHONY: all run clean
+
+all: run
+
+run: $(DB_ALL) $(DB_X)
+
+# ── Rules ────────────────────────────────────────────
+
+$(DB_ALL) $(DB_X): $(SCRIPT) | $(OUTPUT_DIR)
+	$(PYTHON) $(SCRIPT)
+
+$(OUTPUT_DIR):
+	mkdir -p $(OUTPUT_DIR)
+
+clean:
+	rm -rf $(OUTPUT_DIR)
