@@ -2,7 +2,6 @@
 # Runs inside the container (podman compose run builder make <target>)
 # or directly if python3 and required packages are installed locally.
 
-
 # Makefile -- Build logic for UniProt database project
 
 PYTHON     := python3
