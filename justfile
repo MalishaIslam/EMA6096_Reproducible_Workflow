@@ -20,7 +20,7 @@ all:
 
 # Build UniProt databases
 build-db:
-    {{compose}} run --rm builder make run
+    {{compose}} run --rm builder make db_prep
 
 analyze:
     {{compose}} run --rm builder make analysis
