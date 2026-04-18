@@ -67,8 +67,9 @@ Estimated Runtime: 4-5 minutes
 ## Python Files 
 
 scripts/build_uniprot_db.py and scripts/analyze_uniprot_x.py
-Ouput file format:
 
-Output of build_uniprot_db.py: uniprot_all_sequences.db, uniprot_sequences_with_X.db
+**Ouput file format:** 
+
+Output of build_uniprot_db.py: uniprot_all_sequences.db, uniprot_sequences_with_X.db \
 Output of analyze_uniprot_x.py: uniprot_x_analysis_dataframe.csv, uniprot_x_analysis_stats.txt
 
