@@ -20,11 +20,12 @@ ANALYSIS_STATS := $(OUTPUT_DIR)/uniprot_x_analysis_stats.txt
 
 # ── Targets ──────────────────────────────────────────
 
-.PHONY: all run clean
+.PHONY: all run analysis clean
 
 all: run
 
 run: $(DB_ALL) $(DB_X) $(ANALYSIS_DF) $(ANALYSIS_STATS)
+analysis: $(ANALYSIS_DF) $(ANALYSIS_STATS)
 
 
 # ── Rules ────────────────────────────────────────────
