@@ -22,6 +22,9 @@ all:
 build-db:
     {{compose}} run --rm builder make run
 
+analyze:
+    {{compose}} run --rm builder make analysis
+
 # Clean outputs
 clean:
     rm -rf output build
