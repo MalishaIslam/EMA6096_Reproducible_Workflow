@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import ttest_ind
 
-INPUT_DB = "/output/uniprot_sequences_with_X.db"
+INPUT_DB = "output/uniprot_sequences_with_X.db"
 TABLE_NAME = "sequences_with_x"
 
 OUTPUT_DIR = "output"
