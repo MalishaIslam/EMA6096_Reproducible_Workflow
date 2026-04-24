@@ -14,4 +14,8 @@ RUN pip install --no-cache-dir \
     pandas \
     requests \
     numpy \
-    scipy
+    scipy \
+    matplotlib \
+    seaborn \
+    scikit-learn \
+    umap-learn
