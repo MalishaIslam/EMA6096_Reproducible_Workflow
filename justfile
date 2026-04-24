@@ -25,6 +25,9 @@ build-db:
 analyze:
     {{compose}} run --rm builder make analysis
 
+figures:
+    {{compose}} run --rm builder make figures
+
 # Clean outputs
 clean:
     rm -rf output build
