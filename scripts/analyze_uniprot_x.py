@@ -39,6 +39,7 @@ def main() -> None:
         [
             "Entry",
             "sequence_name",
+            "sequence",
             "length",
             "log_length",
             "x_count",
