@@ -30,26 +30,45 @@ def main():
     # --------------------------------------------------
     # Figure 1: X residue fraction by sequence group
     # --------------------------------------------------
+    
+    # plt.figure(figsize=(9, 6))
+
+    # sns.boxplot(
+    #     data=df,
+    #     x="x_group",
+    #     y="x_fraction"
+    # )
+
+    # sns.stripplot(
+    #     data=df,
+    #     x="x_group",
+    #     y="x_fraction",
+    #     color="black",
+    #     alpha=0.45,
+    #     size=5
+    # )
+
+    # plt.title("Unknown Residue Fraction by Sequence Group")
+    # plt.xlabel("Sequence Group")
+    # plt.ylabel("Fraction of Unknown Residues (X)")
+    # plt.tight_layout()
+    # plt.savefig(FIG_BOXPLOT, dpi=1200, bbox_inches="tight")
+    # plt.close()
+
     plt.figure(figsize=(9, 6))
 
-    sns.boxplot(
-        data=df,
-        x="x_group",
-        y="x_fraction"
-    )
-
-    sns.stripplot(
+    sns.violinplot(
         data=df,
         x="x_group",
         y="x_fraction",
-        color="black",
-        alpha=0.45,
-        size=5
+        inner="box",
+        cut=0
     )
 
-    plt.title("Unknown Residue Fraction by Sequence Group")
+    plt.yscale("log")
+    plt.title("Distribution of Unknown Residue Fraction")
     plt.xlabel("Sequence Group")
-    plt.ylabel("Fraction of Unknown Residues (X)")
+    plt.ylabel("Fraction of Unknown Residues (log scale)")
     plt.tight_layout()
     plt.savefig(FIG_BOXPLOT, dpi=1200, bbox_inches="tight")
     plt.close()
