@@ -131,7 +131,7 @@ def main():
         alpha=0.8
     )
 
-    plt.title("UMAP Projection of UniProt Sequences with Unknown Residues")
+    plt.title("UMAP Projection of UniProt Protein Sequences Highlighting Distribution of Unknown Residues (X)")
     plt.xlabel("UMAP Dimension 1")
     plt.ylabel("UMAP Dimension 2")
     # plt.legend(title="Sequence group (color) and X count (size)")
