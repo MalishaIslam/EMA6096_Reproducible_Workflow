@@ -8,6 +8,7 @@ PYTHON     := python3
 SCRIPT     := scripts/build_uniprot_db.py
 ANALYSIS_SCRIPT := scripts/analyze_uniprot_x.py
 FIG_SCRIPT := scripts/preliminary_figures.py
+REPORT_SRC := report/graphical_abstract.typ
 
 
 OUTPUT_DIR := output
@@ -23,28 +24,33 @@ FIG_1 := $(FIG_DIR)/fig_x_fraction_by_group.png
 FIG_2 := $(FIG_DIR)/fig_length_vs_x_count.png
 FIG_3 := $(FIG_DIR)/fig_umap_sequence_projection.png
 
+grph_abs_PDF := $(OUTPUT_DIR)/graphical_abstract.pdf
+
 # ── Targets ──────────────────────────────────────────
 
 .PHONY: all run db_prep analysis figures clean
 
 all: run
 
-run: $(DB_ALL) $(DB_X) $(ANALYSIS_DF) $(ANALYSIS_STATS) $(FIG_1) $(FIG_2) $(FIG_3)
+run: $(DB_ALL) $(DB_X) $(ANALYSIS_DF) $(ANALYSIS_STATS) $(FIG_1) $(FIG_2) $(FIG_3) $(grph_abs_PDF)
 db_prep: $(DB_ALL) $(DB_X)
 analysis: $(ANALYSIS_DF) $(ANALYSIS_STATS)
 figures: $(FIG_1) $(FIG_2) $(FIG_3)
+graph_abstract: $(grph_abs_PDF)
 
 # ── Rules ────────────────────────────────────────────
 
 $(DB_ALL) $(DB_X): $(SCRIPT) | $(OUTPUT_DIR)
 	$(PYTHON) $(SCRIPT)
 
-
 $(ANALYSIS_DF) $(ANALYSIS_STATS): $(ANALYSIS_SCRIPT) $(DB_X)
 	$(PYTHON) $(ANALYSIS_SCRIPT)
 
 $(FIG_1) $(FIG_2) $(FIG_3): $(FIG_SCRIPT) $(ANALYSIS_DF)
 	$(PYTHON) $(FIG_SCRIPT)
+
+$(grph_abs_PDF): $(REPORT_SRC) 
+	typst compile $(REPORT_SRC) $(grph_abs_PDF)
 
 
 $(OUTPUT_DIR):
