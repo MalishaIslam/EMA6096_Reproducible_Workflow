@@ -95,5 +95,5 @@ Estimated Runtime: 4-5 minutes
 
 > [!Note]
 > **Input file:** report/graphical_abstract.typ \
-> **Output:**  \
-> **To view:** open output/graphical
+> **Output:** graphical_abstract.pdf \
+> **To view:** open output/graphical_abstract.pdf
