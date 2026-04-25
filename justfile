@@ -28,6 +28,9 @@ analyze:
 figures:
     {{compose}} run --rm builder make figures
 
+graph_abstract_pdf:
+    {{compose}} run --rm builder make graph_abstract
+
 # Clean outputs
 clean:
     rm -rf output build
