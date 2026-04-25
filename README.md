@@ -32,7 +32,7 @@ podman compose build           [first time we need this to build the container i
 
 **Step 4: Run workflow** \
 just \
-This command rebuilds the database from scratch using UniProt API.
+This command rebuilds everything from scratch.
 
 
 **Database Creation Process**
@@ -64,12 +64,27 @@ Estimated Runtime: 4-5 minutes
 
 -----------------------
 
-## Python Files 
+## Output Generation
 
-scripts/build_uniprot_db.py and scripts/analyze_uniprot_x.py
+> [!Note]
+> **Input file:** scripts/build_uniprot_db.py \
+> **Output:** uniprot_all_sequences.db, uniprot_sequences_with_X.db \
+> **To view:** sqlitebrowser output/uniprot_sequences_with_X.db             [install 'sudo apt install sqlitebrowser']
 
-**Ouput file format:** 
+>'''
+'''
+>'''
 
-Output of build_uniprot_db.py: uniprot_all_sequences.db, uniprot_sequences_with_X.db \
-Output of analyze_uniprot_x.py: uniprot_x_analysis_dataframe.csv, uniprot_x_analysis_stats.txt
+> [!Note]
+> **Input file:** scripts/analyze_uniprot_x.py \
+> **Output:** uniprot_x_analysis_dataframe.csv, uniprot_x_analysis_stats.txt \
+> **To view:** vd output/uniprot_x_analysis_dataframe.csv         [install 'sudo apt install visidata']
 
+>'''
+'''
+>'''
+
+> [!Note]
+> **Input file:** scripts/preliminary_figures.py \
+> **Output:**  \
+> **To view:** open output/figures/fig_length_vs_x_count.png
