@@ -28,7 +28,7 @@ grph_abs_PDF := $(OUTPUT_DIR)/graphical_abstract.pdf
 
 # ── Targets ──────────────────────────────────────────
 
-.PHONY: all run db_prep analysis figures clean
+.PHONY: all run db_prep analysis figures graph_abstract clean
 
 all: run
 
@@ -49,7 +49,7 @@ $(ANALYSIS_DF) $(ANALYSIS_STATS): $(ANALYSIS_SCRIPT) $(DB_X)
 $(FIG_1) $(FIG_2) $(FIG_3): $(FIG_SCRIPT) $(ANALYSIS_DF)
 	$(PYTHON) $(FIG_SCRIPT)
 
-$(grph_abs_PDF): $(REPORT_SRC) 
+$(grph_abs_PDF): $(REPORT_SRC) | $(OUTPUT_DIR)
 	typst compile $(REPORT_SRC) $(grph_abs_PDF)
 
 
