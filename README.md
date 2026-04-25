@@ -86,5 +86,5 @@ Estimated Runtime: 4-5 minutes
 
 > [!Note]
 > **Input file:** scripts/preliminary_figures.py \
-> **Output:**  \
+> **Output:** fig_length_vs_x_count.png,  fig_umap_sequence_projection.png,  fig_x_fraction_by_group.png \
 > **To view:** open output/figures/fig_length_vs_x_count.png
