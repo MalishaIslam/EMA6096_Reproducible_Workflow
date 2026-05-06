@@ -35,7 +35,7 @@ grant_PDF := $(OUTPUT_DIR)/grant_main.pdf
 
 all: run
 
-run: $(DB_ALL) $(DB_X) $(ANALYSIS_DF) $(ANALYSIS_STATS) $(FIG_1) $(FIG_2) $(FIG_3) $(grph_abs_PDF)
+run: $(DB_ALL) $(DB_X) $(ANALYSIS_DF) $(ANALYSIS_STATS) $(FIG_1) $(FIG_2) $(FIG_3) $(grph_abs_PDF) $(grant_PDF)
 db_prep: $(DB_ALL) $(DB_X)
 analysis: $(ANALYSIS_DF) $(ANALYSIS_STATS)
 figures: $(FIG_1) $(FIG_2) $(FIG_3)
