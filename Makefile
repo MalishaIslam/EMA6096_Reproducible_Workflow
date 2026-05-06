@@ -9,6 +9,7 @@ SCRIPT     := scripts/build_uniprot_db.py
 ANALYSIS_SCRIPT := scripts/analyze_uniprot_x.py
 FIG_SCRIPT := scripts/preliminary_figures.py
 REPORT_SRC := report/graphical_abstract.typ
+grant_SRC := grant/grant_main.typ
 
 
 OUTPUT_DIR := output
@@ -26,9 +27,11 @@ FIG_3 := $(FIG_DIR)/fig_umap_sequence_projection.png
 
 grph_abs_PDF := $(OUTPUT_DIR)/graphical_abstract.pdf
 
+grant_PDF := $(OUTPUT_DIR)/grant_main.pdf
+
 # ── Targets ──────────────────────────────────────────
 
-.PHONY: all run db_prep analysis figures graph_abstract clean
+.PHONY: all run db_prep analysis figures graph_abstract grant_file clean
 
 all: run
 
@@ -37,6 +40,7 @@ db_prep: $(DB_ALL) $(DB_X)
 analysis: $(ANALYSIS_DF) $(ANALYSIS_STATS)
 figures: $(FIG_1) $(FIG_2) $(FIG_3)
 graph_abstract: $(grph_abs_PDF)
+grant_file: $(grant_PDF)
 
 # ── Rules ────────────────────────────────────────────
 
@@ -51,6 +55,9 @@ $(FIG_1) $(FIG_2) $(FIG_3): $(FIG_SCRIPT) $(ANALYSIS_DF)
 
 $(grph_abs_PDF): $(REPORT_SRC) | $(OUTPUT_DIR)
 	typst compile $(REPORT_SRC) $(grph_abs_PDF)
+
+$(grant_PDF): $(grant_SRC) | $(OUTPUT_DIR)
+	typst compile $(grant_SRC) $(grant_PDF)
 
 
 $(OUTPUT_DIR):
