@@ -97,3 +97,12 @@ Estimated Runtime: 4-5 minutes
 > **Input file:** report/graphical_abstract.typ \
 > **Output:** graphical_abstract.pdf \
 > **To view:** open output/graphical_abstract.pdf
+
+>'''
+'''
+>'''
+
+> [!Note]
+> **Input file:** grant/grant_main.typ \
+> **Output:** grant_main.pdf \
+> **To view:** open output/grant_main.pdf
