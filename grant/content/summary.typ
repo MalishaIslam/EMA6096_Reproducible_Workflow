@@ -1,0 +1,4 @@
+= Overall Summary and Conclusions
+
+#set par(justify: true)
+This project proposes a computational framework to improve peptide sequence quality and functional annotation reliability for artificial intelligence applications. The study focuses on resolving unknown amino acids, expanding multi-functional peptide annotations, and evaluating how missing information affects machine learning prediction performance. The project also introduces uncertainty-aware modeling methods to improve prediction confidence when sequence information is incomplete. The expected outcome is a structured and extensible peptide database that supports reliable peptide function prediction and reduces ambiguity in existing peptide resources. This work may improve future AI-driven peptide discovery and support biomedical research involving antimicrobial and therapeutic peptides.

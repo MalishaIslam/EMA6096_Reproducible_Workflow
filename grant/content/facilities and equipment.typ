@@ -1,0 +1,4 @@
+= Facilities and Equipment
+
+#set par(justify: true)
+During this proposed work, I will have access to office space and computing facilities at the University of Central Florida (UCF). The project will primarily utilize the UCF Advanced Research Computing Center (ARCC) high-performance computing cluster for large-scale data processing, machine learning model training, and storage. In addition, institutional storage servers will be used for secure data management and backup. A dedicated local workstation (Dell Precision 7865 Tower) with high memory and GPU capability will be used for data preprocessing, feature computation, and initial model development before scaling to ARCC. These resources provide sufficient infrastructure to complete the proposed research efficiently without requiring major new equipment purchases.
